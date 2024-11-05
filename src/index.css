@@ -1,0 +1,113 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #cccccc;
+  --th-bg-color: #f5f5f5;
+  --selected-color: #ffeb3b;
+  --button-bg: #ff4444;
+  --button-hover: #ff0000;
+  --button-text: #ffffff;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: light-dark(var(--bg-color), #1a1a1a);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: light-dark(var(--bg-color), #1a1a1a);
+  color: light-dark(var(--text-color), #ffffff);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+}
+
+.main_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.main_table th {
+  border: 1px solid light-dark(var(--border-color), #444444);
+  padding: 5px;
+  background-color: light-dark(var(--th-bg-color), #2d2d2d);
+  color: light-dark(var(--text-color), #ffffff);
+}
+
+.main_table th.num {
+  width: fit-content;
+  min-width: 2em;
+}
+
+.main_table td {
+  border: 1px solid light-dark(var(--border-color), #444444);
+  padding: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: light-dark(var(--selected-color), #b4a426);
+  cursor: pointer;
+}
+
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.reset-button {
+  padding: 12px 40px;
+  font-size: 16px;
+  background-color: light-dark(var(--button-bg), #cc3333);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: light-dark(var(--button-hover), #aa0000);
+}
+
+.results-container {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.result-box {
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  border-radius: 5px;
+  background-color: light-dark(var(--bg-color), #242424);
+}
+
+.result-box h3 {
+  margin: 0 0 10px 0;
+  color: light-dark(var(--text-color), #ffffff);
+}
+
+.combinations {
+  font-size: 0.9em;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.combinations span {
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 2px 5px;
+  background-color: light-dark(var(--th-bg-color), #2d2d2d);
+  border-radius: 3px;
+}
