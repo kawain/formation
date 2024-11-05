@@ -153,26 +153,29 @@ function MainTable () {
 
         {/* 結果表示部分 */}
         <div className='results-container'>
-          <div className='result-box'>
-            <h3>馬連</h3>
-            <p>組み合わせ数: {results.umaren.count}</p>
-            <div className='combinations'>
-              {results.umaren.combinations.map((combo, index) => (
-                <span key={index}>{combo.join('-')} </span>
-              ))}
-            </div>
-          </div>
+          {firstArr.length > 0 && secondArr.length > 0 && (
+            <>
+              <div className='result-box'>
+                <h3>馬連</h3>
+                <p>組み合わせ数: {results.umaren.count}</p>
+                <div className='combinations'>
+                  {results.umaren.combinations.map((combo, index) => (
+                    <span key={index}>{combo.join('-')} </span>
+                  ))}
+                </div>
+              </div>
 
-          <div className='result-box'>
-            <h3>馬単</h3>
-            <p>組み合わせ数: {results.umatan.count}</p>
-            <div className='combinations'>
-              {results.umatan.combinations.map((combo, index) => (
-                <span key={index}>{combo.join('→')} </span>
-              ))}
-            </div>
-          </div>
-
+              <div className='result-box'>
+                <h3>馬単</h3>
+                <p>組み合わせ数: {results.umatan.count}</p>
+                <div className='combinations'>
+                  {results.umatan.combinations.map((combo, index) => (
+                    <span key={index}>{combo.join('→')} </span>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
           {firstArr.length > 0 && secondArr.length > 0 && thirdArr.length > 0 && (
             <>
               <div className='result-box'>

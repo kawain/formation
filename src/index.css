@@ -80,13 +80,10 @@ h1 {
 
 .results-container {
   margin: 20px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 0 10px;
 }
 
 .result-box {
+  margin: 20px 0;
   border: 1px solid var(--border-color);
   padding: 15px;
   border-radius: 5px;
